@@ -4,12 +4,13 @@
 var currentDay = moment().format('dddd')
 var currentTime = moment().format("MM D YYYY hh:mm");
 var userSave=$("#user-input")
+userSave.textContent
 
 
 //display code on page load
 //current day, day of week
 $(document).ready(function() {
-    console.log("testconnection")
+    
 
     
 var $timeNow= $("#time-display");
@@ -23,7 +24,6 @@ $dayWeek.text(currentDay);
 //On click function - save to memory and then local storage
 $(".col-md-2.btn.btn-info").on("click", function() {
     event.preventDefault()
-    console.log("TESTBUTTON")
     var inputText=$(this).prevAll().val();
     console.log(inputText)
     var inputTime=$(this).parent().attr('id');
@@ -38,7 +38,12 @@ $(".col-md-2.btn.btn-info").on("click", function() {
 
 function pullLocal() {
     localStorage.getItem[8]
-    console.log(localStorage[8])
-    $("#8").child("text-content").val
+    console.log(localStorage[7])
+    $("#8").children("#user-text").val(localStorage.getItem("8"));
+    var teststorage= localStorage[7];
+    console.log(teststorage);
 
-}
+};
+
+
+pullLocal()
