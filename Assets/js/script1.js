@@ -20,14 +20,17 @@ $dayWeek.text(currentDay);
 
 });
 
-//Store user input
-$("#user-input").on("click", function() {
+//On click function - save to array
+$(".col-md-2.btn.btn-info").on("click", function() {
     event.preventDefault()
     console.log("TESTBUTTON")
-    
-    
-}
+    var inputText=$(this).prevAll().val();
+    console.log(inputText)
+    var inputTime=$(this).parent().attr('id');
+    console.log(inputTime)
 
-)
+});
+
+
 
 
