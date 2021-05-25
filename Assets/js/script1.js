@@ -28,7 +28,8 @@ $(".col-md-2.btn.btn-info").on("click", function() {
     console.log(inputText)
     var inputTime=$(this).parent().attr('id');
     console.log(inputTime)
-    localStorage.setItem(inputText, inputTime);
+    localStorage.setItem(inputTime, inputText);
+
 });
 
 
