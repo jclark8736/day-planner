@@ -37,13 +37,24 @@ $(".col-md-2.btn.btn-info").on("click", function() {
 //getting items from local storage
 
 function pullLocal() {
-    localStorage.getItem[8]
-    console.log(localStorage[7])
-    $("#8").children("#user-text").val(localStorage.getItem("8"));
-    var teststorage= localStorage[7];
-    console.log(teststorage);
+    for (i = 7; i < 18; i++) {
+        $("#"+i).children("#user-text").val(localStorage.getItem(i));
+        console.log(i)
+    }
+
 
 };
 
 
 pullLocal()
+
+
+
+
+
+// example for loop numbers 7-17
+    // localStorage.getItem[8]
+    // console.log(localStorage[7])
+    // $("#8").children("#user-text").val(localStorage.getItem("8"));
+    // var teststorage= localStorage[7];
+    // console.log(teststorage);
