@@ -20,7 +20,7 @@ $dayWeek.text(currentDay);
 
 });
 
-//On click function - save to array
+//On click function - save to memory and then local storage
 $(".col-md-2.btn.btn-info").on("click", function() {
     event.preventDefault()
     console.log("TESTBUTTON")
@@ -28,7 +28,7 @@ $(".col-md-2.btn.btn-info").on("click", function() {
     console.log(inputText)
     var inputTime=$(this).parent().attr('id');
     console.log(inputTime)
-
+    localStorage.setItem(inputText, inputTime);
 });
 
 
