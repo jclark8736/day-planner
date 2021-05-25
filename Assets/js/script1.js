@@ -34,4 +34,11 @@ $(".col-md-2.btn.btn-info").on("click", function() {
 
 
 
+//getting items from local storage
 
+function pullLocal() {
+    localStorage.getItem[8]
+    console.log(localStorage[8])
+    $("#8").child("text-content").val
+
+}
