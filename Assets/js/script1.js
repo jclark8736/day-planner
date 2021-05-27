@@ -39,7 +39,7 @@ $(".col-md-2.btn.btn-info").on("click", function() {
 function pullLocal() {
     for (i = 7; i < 18; i++) {
         $("#"+i).children("#user-text").val(localStorage.getItem(i));
-        console.log(i)
+        
     }
 
 
@@ -48,8 +48,25 @@ function pullLocal() {
 
 pullLocal()
 
+//comparing time for blocks
 
+function compareTime() {
+    var currentHour=moment().hour()
+    console.log(currentHour)
+    $(".hour-section").each(function (index, hourSection ) {
+        console.log(parseInt(hourSection.id));
+        if  (parseInt(hourSection.id) < currentHour) {
+            console.log("Test")
+            $(this).children("textarea").addClass("past");
+        }
+        else $(this).children("textarea").addClass("future")
+        
+    })
+};
 
+$("#user-text").addClass("text")
+
+compareTime()
 
 
 // example for loop numbers 7-17
